@@ -1,0 +1,22 @@
+@import "styles/variables/shadow.scss";
+
+.search {
+  position: relative;
+  .search-results {
+    position: absolute;
+    top: 100%;
+    box-shadow: map-get($map: $shadow, $key: 1);
+    width: 100%;
+    box-sizing: border-box;
+    background: white;
+
+    .result {
+      cursor: pointer;
+      padding: 0.5rem;
+
+      &:hover {
+        background: darken(white, 10%);
+      }
+    }
+  }
+}

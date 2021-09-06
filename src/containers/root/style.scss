@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  justify-content: space-between;
+
+  .team {
+    width: calc(30% - 1rem);
+  }
+
+  .trainers {
+    width: 70%;
+  }
+}

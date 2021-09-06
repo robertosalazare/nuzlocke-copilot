@@ -1,0 +1,61 @@
+@import "./variables/shadow.scss";
+@import "./variables/colors.scss";
+@import "./mixins/responsive.scss";
+
+@keyframes show-modal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  display: none;
+  animation: show-modal 0.5s ease;
+
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &, .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .modal-backdrop {
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+    background-color: white;
+    position: relative;
+    box-shadow: map-get($map: $shadow, $key: 1);
+    width: 750px;
+
+    .modal-header {
+      padding: 1rem;
+      border-bottom: 1px solid $separator-light;
+    }
+  
+    .modal-body {
+      padding: 1rem;
+    }
+  
+    .modal-footer {
+      padding: 1rem;
+      border-top: 1px solid $separator-light;
+    }
+
+    @include breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}

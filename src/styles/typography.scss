@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+@import "./mixins/responsive.scss";
+@import "./variables/colors.scss";
+
+body, html{
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: normal;
+  margin: 0;
+  color: $default-font-color-light;
+
+  @include breakpoint-up(md) {
+    font-size: 16px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem }
+h5 { font-size: 1.125rem }
+h6 { font-size: 1rem; }
+
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+.fw-bold {
+  font-weight: bold !important;
+}
+
+.fw-light {
+  font-weight: 300 !important;
+}
+
+.fw-normal {
+  font-weight: 400 !important;
+}

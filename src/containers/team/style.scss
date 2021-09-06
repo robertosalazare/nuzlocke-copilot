@@ -1,0 +1,17 @@
+.team-content {
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.add-edit-pokemon {
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .button:last-child {
+      margin-left: 0.5rem;
+    }
+  }
+}
